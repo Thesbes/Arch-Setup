@@ -1,0 +1,185 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+black = #e32b2b
+background = #BBBBBB
+;background = #99000000
+accent = #676767
+red = #A54242
+green = #3b3b3b
+yellow = #d7c525
+darkYellow = #A1931B
+blue = #2E4EFF
+magenta = #5664B1
+cyan = #7B8DEA
+white = #cdc0c0
+gray  = #292929
+darkBlue = #4456BC
+
+[global/wm]
+margin-top = 3
+margin-bottom = 3
+
+[bar/Bar]
+width = 100%
+height = 30
+offset-x = 0%
+offset-y = 0%
+background = ${colors.gray}
+foreground = ${colors.darkBlue}
+
+;border-size=20
+border-size=0
+border-bottom-size=0
+border-color=#00
+
+/*override-redirect = true*/
+;radius = 10
+/*wm-restack = i3*/
+spacing = 1
+padding-left = 1
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+
+line-size = 4
+
+font-0 = IBM Plex Mono:size=8;4
+;font-0 = IBM Plex Mono:size=8;4
+font-1 = IBM Plex Mono:size=8;4
+
+
+modules-left = i3 xwindow
+modules-center =
+modules-right = volume wlan battery battery1 date
+
+tray-position = right
+tray-padding = 0
+
+[module/i3]
+type = internal/i3
+format = <label-state><label-mode>
+index-sort = true
+
+label-mode-foreground = ${colors.yellow}
+label-mode-background = ${colors.accent}
+label-mode-padding = 1
+label-mode-margin = 1
+
+label-focused-font = 3
+label-unfocused-font = 3
+label-urgent-font = 3
+label-visible-font = 3
+
+ws-icon-0 = 1;I
+ws-icon-1 = 2;II
+ws-icon-2 = 3;III
+ws-icon-3 = 4;IV
+ws-icon-4 = 5;V
+ws-icon-5 = 6;VI
+ws-icon-6 = 7;VII
+ws-icon-7 = 8;VIII
+ws-icon-8 = 9;IX
+ws-icon-9 = 10;X
+
+label-focused = %icon%
+;label-focused-background = ${colors.yellow}
+label-focused-background = #3b3b3b
+label-focused-foreground = ${colors.yellow}
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.darkYellow}
+label-urgent-background = ${colors.yellow}
+label-urgent-padding = 2
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-disconnected =  WLan d/c
+ramp-signal-0 = ?
+
+[module/date]
+type = internal/date
+date =    %A, %b. %d // %H:%M
+time = %H:%M
+interval = 5
+format-font =3 
+;format-background = ${colors.yellow}
+format-background = #3b3b3b
+format-foreground = ${colors.yellow}
+format-padding = 1
+format-margin = 1
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-charging-padding = 1
+format-discharging-padding = 1
+format-full-padding = 1
+format-full-prefix = "// "
+
+ramp-capacity-0 = :O
+ramp-capacity-1 = :\
+ramp-capacity-2 = :|
+ramp-capacity-3 = :)
+ramp-capacity-4 = :D
+
+animation-charging-0 = "     ."
+animation-charging-1 = "    .."
+animation-charging-2 = "   ..."
+animation-charging-3 = "    .."
+/*animation-charging-4 = "     ."*/
+animation-charging-framerate = 750
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+label-margin = 1
+label-maxlen = 30
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+format-volume-padding = 2
+label-volume = ":)"
+;label-volume-foreground = ${colors.cyan}
+
+format-muted-prefix = "\_(._.)_/"
+format-muted-prefix-margin = 2
+;format-muted-foreground = ${colors.cyan}
+label-muted = " mute    "
+
+
+bar-volume-width = 10
+;bar-volume-foreground = ${colors.cyan}
+
+bar-volume-gradient = true
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = -
+bar-volume-fill-font = 2
+bar-volume-empty = .
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.yellow}
