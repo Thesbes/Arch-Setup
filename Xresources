@@ -1,0 +1,106 @@
+!------------------------------------------------------------------------------
+! ROFI Color theme!------------------------------------------------------------------------------
+! ROFI Color theme
+
+! ------------------------------------------------------------------------------
+! rofi.color-enabled: true
+! first two color-window were a013191c
+! a6 = 65% amount of black needed over white for white to be a 7 contrast score
+! b3 = 70%
+! 80 = 50%
+! rofi.line-margin: 31
+! rofi.font: Roboto Light 30
+! rofi.padding: 168
+rofi.fullscreen: true
+! rofi.display-drun: 
+! rofi.display-window: win
+! rofi.display-combi: myprompt
+rofi.color-enabled: true
+! rofi.separator-style: none
+rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
+rofi.color-normal: argb:00000000, #f93e74, argb:00000000, argb:00000000, #f93e74
+rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e56aef
+rofi.color-active: argb:00000000, #f93e74, argb:00000000, argb:00000000, #f93e74
+
+! rofi.font: System San Francisco Display 20
+rofi.font: Quicksand 20
+! rofi.fg: argb:00ffffff
+rofi.eh: 1
+rofi.line-margin: 20
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 7
+rofi.width: 50
+rofi.padding: 200
+rofi.bw: 0 
+rofi.auto-select: false 
+rofi.fuzzy: true
+rofi.scroll-method: 1
+rofi.window-format: {w:5} {t}
+rofi.mesg: "hello"
+! rofi.show-icons: true
+
+
+
+!-------------------------------------------------------------------
+!COLORS
+!-------------------------------------------------------------------
+!RED        = #e32b2b 
+!CYAN       = #03f8e9
+!PINK       = #fb0278
+!GREY       = #3b3b3b
+!WHITE      = #cdc0c0
+!YELLOW     = #d7c525
+!darkYellow = #A1931B
+!darkBlue   = #4456BC
+!-------------------------------------------------------------------
+
+
+
+! special
+URxvt.transparent: true
+URxvt.shading: 5
+URxvt.font: xft:IBM Plex Mono:size=10
+URxvt.internalBorder: 15
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.foreground:   #e8dfd6
+URxvt.background:   #070915
+URxvt.cursorColor:  #d7c525
+URxvt.cursorColor2: #4456bc
+URxvt.highlightColor: #4456bc
+URxvt.highilightTextColor: #d7c525
+URxvt.fadeColor: #d7c525
+
+! black
+URxvt.color0:       #7d0707
+URxvt.color8:       #065f73
+
+! red
+URxvt.color1:       #c2454e
+URxvt.color9:       #ef5847
+
+! green
+URxvt.color2:       #7cbf9e
+URxvt.color10:      #a2d9b1
+
+! yellow
+URxvt.color3:       #8a7a63
+URxvt.color11:      #beb090
+
+! blue
+URxvt.color4:       #2e3340
+URxvt.color12:      #61778d
+
+! magenta
+URxvt.color5:       #ff5879
+URxvt.color13:      #ff99a1
+
+! cyan
+URxvt.color6:       #44b5b1
+URxvt.color14:      #9ed9d8
+
+! white
+URxvt.color7:       #f2f1b9
+URxvt.color15:      #f6f6c9
